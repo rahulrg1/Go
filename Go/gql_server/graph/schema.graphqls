@@ -1,0 +1,24 @@
+
+
+type User {
+  id: String!
+  name: String!
+  location: String!
+  age: Int!
+}
+
+
+input NewUser {
+  name: String!
+  location: String!
+  age: Int!
+}
+
+type Mutation {
+  createUser(input: NewUser!): User!
+  deleteUser(id: String!): User!
+}
+
+type Query {
+  users: [User!]!
+}
